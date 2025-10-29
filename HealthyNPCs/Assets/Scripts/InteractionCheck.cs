@@ -29,7 +29,10 @@ public class InteractionCheck : MonoBehaviour
         if (interactAction.triggered && activeInteractible)
         {
             activeInteractible.GetComponent<IInteractable>().Interact();
+            Debug.Log("interact with: " + activeInteractible.name);
+            return;
         }
+        
     }
 
     private IEnumerator FOVRoutine()
